@@ -1,9 +1,11 @@
 
 import 'package:cupertino_ui/cupertino_ui.dart';
 import 'data/contact_group.dart';
+import 'screens/adaptive_layout.dart';
 
 
-final contactGroupModel = ContactGroupModel();
+
+final contactGroupsModel = ContactGroupsModel();
 
 void main() {
   runApp( const RolodexaApp());
@@ -16,7 +18,7 @@ class RolodexaApp extends StatelessWidget {
 
 
   @override
-  Widget build( BuildContext context){
+  Widget build(BuildContext context){
     return  const CupertinoApp(
       debugShowCheckedModeBanner: false,
       title: 'Rolodex',
@@ -26,7 +28,7 @@ class RolodexaApp extends StatelessWidget {
           darkColor: Color(0xFF1D1D1D),
         ),
       ),
-      home: CupertinoPageScaffold(child: Center(child: Text('This is Rolodex'))),
+      home: AdaptiveLayout(),
     );
   }
 }
